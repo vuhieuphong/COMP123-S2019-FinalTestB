@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace COMP123_S2019_FinalTestB.Objects
 {
-    class Item
+    public class Item
     {
         public string Description { get; set; }
         public float Weight { get; set; }
