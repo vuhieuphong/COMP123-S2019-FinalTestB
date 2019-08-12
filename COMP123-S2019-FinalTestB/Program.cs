@@ -7,7 +7,12 @@ using COMP123_S2019_FinalTestB.Views;
 
 namespace COMP123_S2019_FinalTestB
 {
-    
+    /*
+     *STUDENT NAME:
+     * STUDENT ID:
+     * DESCRIPTION: This is the driver class for the application
+     */
+
     public static class Program
     {
         public static CharacterGeneratorForm characterForm;
