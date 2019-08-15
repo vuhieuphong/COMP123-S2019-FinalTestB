@@ -185,7 +185,7 @@ namespace COMP123_S2019_FinalTestB.Views
 
         private void CharacterSheetLoad()
         {
-            HeroNameDataLabel.Text = Program.heroName;
+            HeroNameDataLabel.Text = CharacterNameTextBox.Text;
             GeneratedNameDataLabel.Text = Program.character.FirstName + " " + Program.character.LastName;
 
             GeneratedStrengthDataLabel.Text = Program.character.Strength;
@@ -295,6 +295,15 @@ namespace COMP123_S2019_FinalTestB.Views
         private void helpToolStripButton_Click(object sender, EventArgs e)
         {
             Program.aboutBox.ShowDialog();
+        }
+
+        //event for tab control being selected
+        private void MainTabControl_Selected(object sender, TabControlEventArgs e)
+        {
+            if(MainTabControl.SelectedIndex==3)
+            {
+                CharacterSheetLoad();
+            }
         }
     }
 }

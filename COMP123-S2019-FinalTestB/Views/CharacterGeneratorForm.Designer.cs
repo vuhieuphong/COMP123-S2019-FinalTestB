@@ -69,7 +69,7 @@
             this.FirstItemDataLabel = new System.Windows.Forms.Label();
             this.InventoryItemLabel = new System.Windows.Forms.Label();
             this.CharacterSheetPage = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.CharacterSheetTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.HeroNameDataLabel = new System.Windows.Forms.Label();
             this.HeroName = new System.Windows.Forms.Label();
             this.GeneratedNameLabel = new System.Windows.Forms.Label();
@@ -121,7 +121,7 @@
             this.InventoryPage.SuspendLayout();
             this.InventoryTableLayoutPanel.SuspendLayout();
             this.CharacterSheetPage.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.CharacterSheetTableLayoutPanel.SuspendLayout();
             this.MainToolStrip.SuspendLayout();
             this.MainMenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -158,6 +158,7 @@
             this.MainTabControl.SelectedIndex = 0;
             this.MainTabControl.Size = new System.Drawing.Size(784, 462);
             this.MainTabControl.TabIndex = 4;
+            this.MainTabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.MainTabControl_Selected);
             // 
             // IdentityPage
             // 
@@ -681,7 +682,7 @@
             // 
             // CharacterSheetPage
             // 
-            this.CharacterSheetPage.Controls.Add(this.tableLayoutPanel1);
+            this.CharacterSheetPage.Controls.Add(this.CharacterSheetTableLayoutPanel);
             this.CharacterSheetPage.Controls.Add(this.MainToolStrip);
             this.CharacterSheetPage.Controls.Add(this.MainMenuStrip);
             this.CharacterSheetPage.Location = new System.Drawing.Point(4, 33);
@@ -692,52 +693,52 @@
             this.CharacterSheetPage.Text = "Character Sheet";
             this.CharacterSheetPage.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel1
+            // CharacterSheetTableLayoutPanel
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.HeroNameDataLabel, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.HeroName, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedNameLabel, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedNameDataLabel, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedConstitutionDataLabel, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.ExitButton, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedIntelligenceLabel, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedIntelligenceDataLabel, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedCharismaLabel, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedCharismaDataLabel, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedWisdomLabel, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedWisdomDataLabel, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedConstitutionLabel, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedDexterityLabel, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedDexterityDataLabel, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedStrengthLabel, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedStrengthDataLabel, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedFirstItemLabel, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedSecondItemLabel, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedThirdItemLabel, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedFourthItemLabel, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedFirstItemDataLabel, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedSecondItemDataLabel, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedThirdItemDataLabel, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.GeneratedFourthItemDataLabel, 3, 6);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 55);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 8;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(759, 357);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.CharacterSheetTableLayoutPanel.ColumnCount = 4;
+            this.CharacterSheetTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.CharacterSheetTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.CharacterSheetTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.CharacterSheetTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.HeroNameDataLabel, 1, 0);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.HeroName, 0, 0);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedNameLabel, 0, 1);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedNameDataLabel, 1, 1);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedConstitutionDataLabel, 1, 5);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.ExitButton, 2, 7);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedIntelligenceLabel, 0, 6);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedIntelligenceDataLabel, 1, 6);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedCharismaLabel, 2, 1);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedCharismaDataLabel, 3, 1);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedWisdomLabel, 2, 0);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedWisdomDataLabel, 3, 0);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedConstitutionLabel, 0, 5);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedDexterityLabel, 0, 4);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedDexterityDataLabel, 1, 4);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedStrengthLabel, 0, 3);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedStrengthDataLabel, 1, 3);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedFirstItemLabel, 2, 3);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedSecondItemLabel, 2, 4);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedThirdItemLabel, 2, 5);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedFourthItemLabel, 2, 6);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedFirstItemDataLabel, 3, 3);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedSecondItemDataLabel, 3, 4);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedThirdItemDataLabel, 3, 5);
+            this.CharacterSheetTableLayoutPanel.Controls.Add(this.GeneratedFourthItemDataLabel, 3, 6);
+            this.CharacterSheetTableLayoutPanel.Location = new System.Drawing.Point(6, 55);
+            this.CharacterSheetTableLayoutPanel.Name = "CharacterSheetTableLayoutPanel";
+            this.CharacterSheetTableLayoutPanel.RowCount = 8;
+            this.CharacterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.CharacterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.CharacterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.CharacterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.CharacterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.CharacterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.CharacterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.CharacterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.CharacterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.CharacterSheetTableLayoutPanel.Size = new System.Drawing.Size(759, 357);
+            this.CharacterSheetTableLayoutPanel.TabIndex = 2;
             // 
             // HeroNameDataLabel
             // 
@@ -809,7 +810,7 @@
             this.ExitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.ExitButton, 2);
+            this.CharacterSheetTableLayoutPanel.SetColumnSpan(this.ExitButton, 2);
             this.ExitButton.Location = new System.Drawing.Point(381, 311);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(375, 43);
@@ -1190,12 +1191,12 @@
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(113, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripButton_Click);
             // 
@@ -1225,8 +1226,8 @@
             this.InventoryTableLayoutPanel.PerformLayout();
             this.CharacterSheetPage.ResumeLayout(false);
             this.CharacterSheetPage.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.CharacterSheetTableLayoutPanel.ResumeLayout(false);
+            this.CharacterSheetTableLayoutPanel.PerformLayout();
             this.MainToolStrip.ResumeLayout(false);
             this.MainToolStrip.PerformLayout();
             this.MainMenuStrip.ResumeLayout(false);
@@ -1292,7 +1293,7 @@
         private System.Windows.Forms.Label FourthItemDataLabel;
         private System.Windows.Forms.Label FourthItemLabel;
         private System.Windows.Forms.Button GenerateInventoryButton;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel CharacterSheetTableLayoutPanel;
         private System.Windows.Forms.Label HeroNameDataLabel;
         private System.Windows.Forms.Label HeroName;
         private System.Windows.Forms.Label GeneratedNameLabel;

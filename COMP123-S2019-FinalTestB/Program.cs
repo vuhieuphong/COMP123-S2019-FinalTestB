@@ -23,7 +23,6 @@ namespace COMP123_S2019_FinalTestB
         public static Item thirdItem;
         public static Item fourthItem;
         public static AboutBox aboutBox;
-        public static string heroName;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
